@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "apiName": "reservation",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "Reservations"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "maxLength": 40
+    },
+    "date": {
+      "type": "datetime",
+      "required": true,
+      "pluginOptions": {
+        "strapi-reservations": {
+          "enabled": true
+        }
+      }
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "confirmed"
+      ],
+      "default": "draft",
+      "required": true
+    }
+  }
+}

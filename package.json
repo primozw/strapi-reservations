@@ -1,0 +1,55 @@
+{
+  "name": "strapi-reservations",
+  "version": "0.0.0",
+  "description": "Strapi plugin for making reservations based on provided schedule.",
+  "strapi": {
+    "name": "strapi-reservations",
+    "description": "Strapi plugin for making reservations based on provided schedule.",
+    "kind": "plugin",
+    "displayName": "Strapi Reservations"
+  },
+  "scripts": {
+    "extract": "formatjs extract 'admin/**/*.{ts,tsx,vue,js,jsx}' --out-file translations/lang.json --flatten",
+    "compile": "formatjs compile 'translations/lang.json' --out-file translations/en.json",
+    "translate": "formatjs extract 'admin/**/*.{ts,tsx,vue,js,jsx}' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file translations/en.json && rm temp.json"
+  },
+  "dependencies": {
+    "@devexpress/dx-react-core": "^4.0.4",
+    "@devexpress/dx-react-scheduler": "^4.0.4",
+    "@devexpress/dx-react-scheduler-material-ui": "^4.0.4",
+    "@mui/icons-material": "^5.11.9",
+    "@mui/material": "^5.11.10",
+    "@mui/x-date-pickers": "^6.0.0",
+    "@strapi/design-system": "^1.7.10",
+    "@strapi/helper-plugin": "^4.10.7",
+    "@strapi/icons": "^1.7.10",
+    "date-holidays": "^3.16.17",
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-colorful": "^5.6.1",
+    "react-intl": "^6.4.2",
+    "tinycolor2": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@formatjs/cli": "^6.1.1"
+  },
+  "author": {
+    "name": "Primož Weingerl"
+  },
+  "maintainers": [
+    {
+      "name": "Primož Weingerl"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

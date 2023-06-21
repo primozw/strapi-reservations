@@ -1,0 +1,122 @@
+{
+  "monday": {
+    "opened": false,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  },
+  "tuesday":  {
+    "opened": true,
+    "automatic": {
+      "enabled": true,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": false,
+      "settings": []
+    }
+  },
+  "wednesday": {
+    "opened": true,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  },
+  "thursday": {
+    "opened": true,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  },
+  "friday": {
+    "opened": false,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  },
+  "saturday": {
+    "opened": false,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  },
+  "sunday": {
+    "opened": false,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  },
+  "holiday": {
+    "opened": false,
+    "automatic": {
+      "enabled": false,
+      "settings": {
+        "start": "09:00",
+        "end": "19:00",
+        "duration": "03:00"
+      }
+    },
+    "manual": {
+      "enabled": true,
+      "settings": ["08:00", "09:00", "13:00"]
+    }
+  }
+}

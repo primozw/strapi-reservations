@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "singularName": "schedule",
+    "pluralName": "schedules",
+    "displayName": "Schedules"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "end": {
+      "type": "date",
+      "required": true
+    },
+    "timetable": {
+      "type": "json",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "yearless": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+
+  }
+}
