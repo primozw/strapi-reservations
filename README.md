@@ -13,22 +13,53 @@ Strapi plugin for making reservations based on predefined time slots.
 
 - [Features](#features)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [Requirements](#requirements)
 
-## <a id="features"></a>✨ Features
+## <a id="features"></a> Features
 
 - Create reservation based on predefined time slots
 - Time slots are generated based on defined schedule (opening hours) and can be created automaticly or manualy
 - Schedules can be defined for exact period of time or for certain time of the year, without considering the year (yearless)
-- Supports holidays
+- Supports holidays ([date-holidays](https://www.npmjs.com/package/date-holidays))
 - View reservations in calendar (day, week or month view)
 - API for getting time slots
 - Confirm or cancel reservation (supports callback functions)
 - Supports i18n for content and user's preferred language for UI
 
-### Todo list:
+## <a id="installation"></a> Installation
+
+To install this plugin, you need to add an NPM dependency to your Strapi application.
+
+```sh
+# Using Yarn
+yarn add @weingerl/strapi-reservations
+
+# Or using NPM
+npm install @weingerl/strapi-reservations
+```
+
+Update your `./config/plugins.js` file if it already exists or create it with the following:
+
+```js
+module.exports = ({ env }) => ({
+  // ...
+  "strapi-reservations": {
+    enabled: true,
+  },
+  // ...
+});
+```
+
+Then, you'll need to build your admin panel:
+
+```sh
+# Using Yarn
+yarn build
+
+# Or using NPM
+npm run build
+```
+
+## Todo list:
 
 - [ ] double click on calendar cell to create registration
 - [ ] differentiate/disable cells on calendar that doesn't have available time slots
