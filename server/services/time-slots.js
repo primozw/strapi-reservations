@@ -173,6 +173,7 @@ module.exports = () => ({
       weekSlots[i] = {
         date: _day.format(),
         day: _day.format('dddd'),
+        reservations: _reservations.length !== 0,
         slots
       }
       _day = _day.add(1, 'day')
@@ -192,9 +193,14 @@ module.exports = () => ({
 
     const settings = await strapi.plugin('strapi-reservations').service('schedule').getScheduleSettings(date, schedules);
     
+    const _reservations = reservations.filter( 
+      reservation => isSameDay(date, dayjs(reservation.date))
+    )
+
     return {
       date: date.format(),
       day: date.format('dddd'),
+      reservations: _reservations.length !== 0,
       slots: settings ? getSlots(settings, reservations) : null
     }
   }

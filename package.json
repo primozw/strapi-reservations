@@ -1,6 +1,6 @@
 {
   "name": "strapi-reservations",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Strapi plugin for making reservations based on provided schedule.",
   "strapi": {
     "name": "strapi-reservations",
@@ -8,10 +8,14 @@
     "kind": "plugin",
     "displayName": "Strapi Reservations"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/primozw/strapi-reservations"
+  },
   "scripts": {
-    "extract": "formatjs extract 'admin/**/*.{ts,tsx,vue,js,jsx}' --out-file translations/lang.json --flatten",
+    "extract": "formatjs extract 'admin/src/*.js' 'admin/src/**/*.{ts,tsx,vue,js,jsx}' --out-file translations/lang.json --flatten",
     "compile": "formatjs compile 'translations/lang.json' --out-file translations/en.json",
-    "translate": "formatjs extract 'admin/**/*.{ts,tsx,vue,js,jsx}' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file translations/en.json && rm temp.json"
+    "translate": "formatjs extract 'admin/src/*.js' 'admin/src/**/*.{ts,tsx,vue,js,jsx}' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file translations/en.json && rm temp.json"
   },
   "dependencies": {
     "@devexpress/dx-react-core": "^4.0.4",
@@ -39,12 +43,19 @@
     "@emotion/styled": "^11.10.6",
     "@formatjs/cli": "^6.1.1"
   },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.0.0"
+  },
   "author": {
-    "name": "Primož Weingerl"
+    "name": "Primož Weingerl",
+    "email": "primoz@weingerl.com",
+    "url": "https://weingerl.com"
   },
   "maintainers": [
     {
-      "name": "Primož Weingerl"
+      "name": "Primož Weingerl",
+      "email": "primoz@weingerl.com",
+      "url": "https://weingerl.com"
     }
   ],
   "engines": {

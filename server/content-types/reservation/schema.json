@@ -33,7 +33,8 @@
         "confirmed"
       ],
       "default": "draft",
-      "required": true
+      "required": true,
+      "visible": false
     }
   }
 }

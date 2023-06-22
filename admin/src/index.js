@@ -16,7 +16,7 @@ export default {
       to: `/plugins/${pluginId}`,
       icon: PluginIcon,
       intlLabel: {
-        id: `${pluginId}.admin-menu.reservations.page`,
+        id: `strapi-reservations.admin-menu.reservations.page`,
         defaultMessage: 'Reservations',
       },
       Component: async () => {
@@ -38,15 +38,15 @@ export default {
       {
         id: pluginId,
         intlLabel: {
-          id: `${pluginId}.admin-menu.settings.section`,
+          id: `strapi-reservations.admin-menu.settings.section`,
           defaultMessage: 'Reservations',
         },
       },
       [
         {
           intlLabel: {
-            id: `${pluginId}.admin-menu.settings.page`,
-            defaultMessage: 'Settings',
+            id: `strapi-reservations.admin-menu.settings.page`,
+            defaultMessage: 'Configuration',
           },
           id: 'settings',
           to: `/settings/${pluginId}`,

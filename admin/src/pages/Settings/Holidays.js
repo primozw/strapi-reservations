@@ -9,7 +9,7 @@ import {
   Typography,
   Grid,
   GridItem,
-  ToggleInput
+  ToggleInput,
 } from '@strapi/design-system';
 
 import { 
@@ -84,11 +84,11 @@ const HolidaysSettings = ({settings, handleSettings}) => {
           <ToggleInput 
             label={formatMessage({
               id: `strapi-reservations.settings.holidays.enable.label`,
-              defaultMessage: `Turn on holidays`
+              defaultMessage: `Holidays`
             })}
             hint={formatMessage({
               id: `strapi-reservations.settings.holidays.enable.hint`,
-              defaultMessage: `Holiday schedules will have precedence over daily schedules.`
+              defaultMessage: `Holiday time slots will have precedence over daily time slots.`
             })}
             name="enableHoliday" 
             onLabel={formatMessage({
@@ -168,7 +168,6 @@ const HolidaysSettings = ({settings, handleSettings}) => {
           </MultiSelect>
         </GridItem>
       </Grid>
-
 
     </Box>
   );

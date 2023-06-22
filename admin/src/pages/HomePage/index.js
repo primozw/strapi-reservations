@@ -159,7 +159,7 @@ function HomePage() {
   return (
     <Container>
       <BaseHeaderLayout 
-        title={formatMessage({ id: 'strapi-reservations.calendar.title', defaultMessage: 'Reservation Calendar' })} 
+        title={formatMessage({ id: 'strapi-reservations.calendar.title', defaultMessage: 'Reservations Calendar' })} 
         as="h2" 
         primaryAction={primaryAction}
       />

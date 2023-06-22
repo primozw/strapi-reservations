@@ -66,18 +66,6 @@ const Timetable = ({
 
   return (
     <Box marginBottom={4} marginTop={8}>
-      <Box marginBottom={4}>
-        <Typography
-            as={'h2'}
-            variant={'delta'}
-          >
-            <FormattedMessage
-              id={'strapi-reservations.settings.schedules.modal.timetable.title'}
-              defaultMessage={'Timetable'}
-            />
-        </Typography>
-      </Box>
-
       <AccordionGroup>
         {days.map(( day, i ) => {
 
@@ -116,7 +104,7 @@ const Timetable = ({
                           visibleLabels
                           onLabel={formatMessage({
                             id: `strapi-reservations.settings.schedule.modal.timetable.days.toggleBtn.on`,
-                            defaultMessage: `Opened`
+                            defaultMessage: `Open`
                           })}
                           offLabel={formatMessage({
                             id: `strapi-reservations.settings.schedule.modal.timetable.days.toggleBtn.off`,

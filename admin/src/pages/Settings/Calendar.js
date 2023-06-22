@@ -12,7 +12,11 @@ import {
   NumberInput
 } from '@strapi/design-system';
 
-const HolidaysSettings = ({settings, handleSettings}) => {
+import ColorPickerInput from './../../components/ColorPickerInput'
+
+
+
+const CalendarSettings = ({settings, handleSettings}) => {
 
   const { formatMessage } = useIntl();
 
@@ -124,10 +128,29 @@ const HolidaysSettings = ({settings, handleSettings}) => {
         </GridItem>
       </Grid>
 
+      <Grid gap={7} marginBottom={4} marginTop={4}>
+        <GridItem col={4} xs={12} s={6}>
+          <ColorPickerInput
+            intlLabel={{ id: 'strapi-reservations.settings.colors.draftColor.label', defaultMessage: 'Draft Color' }}
+            onChange= {(e) => handleSettings({prop: 'draftColor', value: e.target.value})}
+            name={'settings.colors.draftColor.label'}
+            value={settings.draftColor}
+          />
+        </GridItem>
+        <GridItem col={4} xs={12} s={6}>
+        <ColorPickerInput
+              intlLabel={{ id: 'strapi-reservations.settings.colors.confirmedColor.label', defaultMessage: 'Confirmed Color' }}
+              onChange= {(e) => handleSettings({prop: 'confirmedColor', value: e.target.value})}
+              name={'settings.colors.confirmedColor.label'}
+              value={settings.confirmedColor}
+          />
+        </GridItem>
+      </Grid>
+
 
 
     </Box>
   );
 };
 
-export default HolidaysSettings;
+export default CalendarSettings;

@@ -21,7 +21,7 @@ const AutomaticSlots = ({
         <TimePicker 
           label={formatMessage({
             id: 'strapi-reservations.settings.schedule.modal.timetable.automaticMode.start',
-            defaultMessage: 'Start'
+            defaultMessage: 'Opening time'
           })} 
           id="automaticTimeSlots.start" 
           onChange={(value) => handleChange(`timetable.${day}.automatic.settings.start`, value)} 
@@ -33,7 +33,7 @@ const AutomaticSlots = ({
         <TimePicker 
           label={formatMessage({
             id: 'strapi-reservations.settings.schedule.modal.timetable.automaticMode.end',
-            defaultMessage: 'End'
+            defaultMessage: 'Closing time'
           })} 
           id="automaticTimeSlots.end" 
           onChange={(value) => handleChange(`timetable.${day}.automatic.settings.end`, value)} 

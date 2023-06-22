@@ -87,7 +87,7 @@ const Settings = () => {
         id="title"
         title={formatMessage({
           id: 'strapi-reservations.settings.title',
-          defaultMessage: "Reservation Settings",
+          defaultMessage: "Reservations",
         })}
         subtitle={formatMessage({
           id: 'strapi-reservations.settings.subtitle',
@@ -132,7 +132,7 @@ const Settings = () => {
               </Box>
               <Calendar settings={settings} handleSettings={handleSettings} />
               <Holidays settings={settings} handleSettings={handleSettings} />
-              <Colors settings={settings} handleSettings={handleSettings} />
+              {/* <Colors settings={settings} handleSettings={handleSettings} /> */}
             </Box>
           </Box>
         </ContentLayout>
