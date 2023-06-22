@@ -320,10 +320,9 @@ how the calendar is displayed and manage holiday-related configurations.
 
 - **Holidays**: determines if holiday time slots take precedence over daily time
   slots.
-- **Country, State, or Region Selection**: When holidays are enabled, users can
+- **Country, State, or Region Selection**: When holidays are enabled, you can
   choose the specific country, state, or region for which the holidays will be
-  considered. This ensures that relevant holidays are accurately accounted for
-  in the calendar. The plugin use
+  considered. The plugin use
   [date-holiday](https://www.npmjs.com/package/date-holidays) to fetch holiday
   data.
 
