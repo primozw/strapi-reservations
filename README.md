@@ -2,7 +2,7 @@
   <img style="width: 80px; height: auto;" src="public/logo.svg" alt="Logo for Strapi Reservation Plugin" />
   <h1>Strapi Reservation Plugin</h1>
 
-<a href="https://strapi.io/" target="_blank"><img style="width: 160px; height: auto;" src="public/made-with-strapi.svg" alt="Made with Strapi badge" /></a>
+<a href="https://strapi.io/" target="_blank"><img style="width: 160px; height: auto;" src="public/made-for-strapi.svg" alt="Made with Strapi badge" /></a>
 
 The Strapi Reservation Plugin is a custom plugin designed to enable reservation
 functionality with predefined time slots.
