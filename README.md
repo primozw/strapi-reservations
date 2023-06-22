@@ -20,6 +20,8 @@ functionality with predefined time slots.
   - [Reservations Calendar](#reservations-calendar)
 - [API endpoint](#api-endpoint)
 - [Callback functions](#callback-functions)
+- [Settings](#settings)
+- [Todo List](#todo)
 - [Support or Donate](#donate)
 
 ## <a id="features"></a> Features
