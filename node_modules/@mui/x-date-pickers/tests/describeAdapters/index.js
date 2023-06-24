@@ -1,1 +1,0 @@
-export { describeAdapters } from './describeAdapters';

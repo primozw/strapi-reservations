@@ -1,1 +1,0 @@
-export { describePicker } from './describePicker';

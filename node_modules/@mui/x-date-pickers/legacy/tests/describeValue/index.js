@@ -1,1 +1,0 @@
-export { describeValue } from './describeValue';

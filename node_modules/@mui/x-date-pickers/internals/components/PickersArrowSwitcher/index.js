@@ -1,1 +1,0 @@
-export { PickersArrowSwitcher } from './PickersArrowSwitcher';

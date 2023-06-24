@@ -1,1 +1,0 @@
-export { describeHijriAdapter } from './describeHijriAdapter';
