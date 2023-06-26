@@ -50,19 +50,6 @@ yarn add @weingerl/strapi-reservations
 npm install @weingerl/strapi-reservations
 ```
 
-Update your `./config/plugins.js` file if it already exists or create it with
-the following:
-
-```js
-module.exports = ({ env }) => ({
-  // ...
-  "strapi-reservations": {
-    enabled: true,
-  },
-  // ...
-});
-```
-
 Then, you'll need to build your admin panel:
 
 ```sh
