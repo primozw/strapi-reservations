@@ -1,6 +1,6 @@
 {
   "name": "@weingerl/strapi-reservations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Strapi plugin designed to enable reservation functionality with predefined time slots.",
   "strapi": {
     "name": "strapi-reservations",
