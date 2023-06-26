@@ -44,10 +44,10 @@ application.
 
 ```sh
 # Using Yarn
-yarn add strapi-reservations
+yarn add @weingerl/strapi-reservations
 
 # Or using NPM
-npm install strapi-reservations
+npm install @weingerl/strapi-reservations
 ```
 
 Update your `./config/plugins.js` file if it already exists or create it with
