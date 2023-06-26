@@ -1,6 +1,6 @@
 {
   "name": "@weingerl/strapi-reservations",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Strapi plugin designed to enable reservation functionality with predefined time slots.",
   "strapi": {
     "name": "strapi-reservations",
@@ -23,7 +23,7 @@
     "@devexpress/dx-react-scheduler-material-ui": "^4.0.4",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
-    "@mui/x-date-pickers": "^6.0.0",
+    "@mui/x-date-pickers": "^6.9.0",
     "@strapi/design-system": "^1.7.10",
     "@strapi/helper-plugin": "^4.10.7",
     "@strapi/icons": "^1.7.10",
