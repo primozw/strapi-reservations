@@ -15,7 +15,8 @@
   "scripts": {
     "extract": "formatjs extract 'admin/src/*.js' 'admin/src/**/*.{ts,tsx,vue,js,jsx}' --out-file translations/lang.json --flatten",
     "compile": "formatjs compile 'translations/lang.json' --out-file translations/en.json",
-    "translate": "formatjs extract 'admin/src/*.js' 'admin/src/**/*.{ts,tsx,vue,js,jsx}' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file translations/en.json && rm temp.json"
+    "translate": "formatjs extract 'admin/src/*.js' 'admin/src/**/*.{ts,tsx,vue,js,jsx}' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file translations/en.json && rm temp.json",
+    "update": "npm version patch --force && npm publish"
   },
   "dependencies": {
     "@devexpress/dx-react-core": "^4.0.4",
@@ -36,7 +37,7 @@
     "tinycolor2": "^1.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.0.0-rc.3"
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.6",
