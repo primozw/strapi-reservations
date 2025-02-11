@@ -2,8 +2,9 @@
 
 const timeSlots = require('./time-slots');
 const timeSlotsAdmin = require('./time-slots-admin');
-const settings = require('./settings'); 
+const settings = require('./settings');
 const reservations = require('./reservations');
+const reservationsAdmin = require('./reservations-admin');
 const schedules = require('./schedules');
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
   timeSlotsAdmin,
   settings,
   reservations,
+  reservationsAdmin,
   schedules,
 };

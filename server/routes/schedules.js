@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  type: 'admin', // other type available: admin.
+  type: 'admin', // other type available: content-api.
   routes: [
     // single instance
     {

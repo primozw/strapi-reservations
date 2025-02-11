@@ -1,6 +1,16 @@
 'use strict';
 
-module.exports = ({ strapi }) => ({
+module.exports = ({strapi}) => ({
+
+  async createReservation(ctx) {
+    try {
+      const { body: data } = ctx.request
+      ctx.body = await strapi.plugin('strapi-reservations').service('reservations').createReservation(data);
+    } catch (err) {
+      ctx.throw(500, err);
+    }
+  },
+
   async getReservations(ctx) {
     try {
       ctx.body = await strapi
@@ -12,7 +22,7 @@ module.exports = ({ strapi }) => ({
     }
   },
 
-  async confirmReservation(ctx){
+  async confirmReservation(ctx) {
     try {
       const { body: data } = ctx.request
       await strapi.plugin('strapi-reservations').service('hooks')?.onConfirm(ctx)
@@ -21,8 +31,8 @@ module.exports = ({ strapi }) => ({
       ctx.throw(500, err);
     }
   },
-  
-  async cancelReservation(ctx){
+
+  async cancelReservation(ctx) {
     try {
       const { body: data } = ctx.request
       await strapi.plugin('strapi-reservations').service('hooks')?.onCancel(ctx)
