@@ -24,7 +24,11 @@ const api = {
 
   cancelReservation: async ( data ) => {
     return await axiosInstance.post(`/strapi-reservations/cancel`, data);
-  }, 
+  },
+
+  createReservation: async data => {
+    return await axiosInstance.post(`/strapi-reservations`, data);
+  },
 
   /** Time slots */
   getMonthlyTimeSlots: async ( date,  controller) => {

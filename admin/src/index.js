@@ -26,10 +26,10 @@ export default {
       },
       permissions: [
         // Uncomment to set the permissions of the plugin here
-        // {
-        //   action: '', // the action name should be plugin::plugin-name.actionType
-        //   subject: null,
-        // },
+        {
+          action: 'plugin::strapi-reservations.create', // the action name should be plugin::plugin-name.actionType
+          subject: null,
+        },
       ],
     });
 

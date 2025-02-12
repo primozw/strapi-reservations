@@ -7,6 +7,13 @@ const dayjs = require('dayjs')
  */
 
 module.exports = () => ({
+
+  async createReservation(data) {
+    return await strapi.db.query('plugin::strapi-reservations.reservation').create({
+      data
+    });
+  },
+
   async getReservations(date = new Date()) {
 
     // get reservations between one month before and one month after

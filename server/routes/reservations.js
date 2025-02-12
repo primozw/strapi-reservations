@@ -5,22 +5,12 @@
  */
 
 module.exports = {
-  type: 'admin',
+  type: 'content-api', // other type available: admin.
   routes: [
     {
-      method: 'GET',
+      method: 'POST',
       path: '/',
-      handler: 'reservations.getReservations'
-    },
-    {
-      method: 'POST',
-      path: '/confirm',
-      handler: 'reservations.confirmReservation'
-    },
-    {
-      method: 'POST',
-      path: '/cancel',
-      handler: 'reservations.cancelReservation'
+      handler: 'reservations.createReservation'
     },
   ],
 };
