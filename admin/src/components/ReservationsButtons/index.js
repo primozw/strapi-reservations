@@ -13,7 +13,8 @@ import {
 } from '@strapi/design-system';
 
 import { ExclamationMarkCircle, Check } from '@strapi/icons'
-import { useCMEditViewDataManager, useNotification, useAppInfos, useTracking } from '@strapi/helper-plugin'
+import { useNotification } from '@strapi/strapi/admin'
+import { unstable_useDocument } from '@strapi/content-manager/strapi-admin';
 
 import api from './../../api'
 
@@ -23,8 +24,8 @@ const ReservationsButtons = () => {
   const [cancelModal, setCancelModal] = useState(null)
 
   const { formatMessage } = useIntl();
-  const cmeProps = useCMEditViewDataManager();
-  const { slug, initialData, modifiedData } = cmeProps
+  const document = unstable_useDocument();
+  const { collectionType, initialValues, values } = document || {};
   const toggleNotification = useNotification();
 
   const confirmHandler = () => {
@@ -41,7 +42,7 @@ const ReservationsButtons = () => {
     if (action === 'confirm') {
       
       setConfirmModal(false)
-      const { data } = await api.confirmReservation(modifiedData)
+      const { data } = await api.confirmReservation(values)
 
       if ( data.status === 'confirmed') {
         return toggleNotification({
@@ -63,7 +64,7 @@ const ReservationsButtons = () => {
    
     } else {
       setCancelModal(false)
-      const { data } = await api.cancelReservation(modifiedData)
+      const { data } = await api.cancelReservation(values)
 
       if ( data.status === 'draft') {
         return toggleNotification({
@@ -86,7 +87,7 @@ const ReservationsButtons = () => {
     }
   }
 
-  if (slug !== 'plugin::strapi-reservations.reservation') return null
+  if (collectionType !== 'plugin::strapi-reservations.reservation') return null
 
   return (
     <>

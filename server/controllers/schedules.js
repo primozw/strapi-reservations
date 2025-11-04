@@ -16,7 +16,7 @@ module.exports = ({ strapi }) => ({
    try {
   
       // Get all available schedules
-    const schedules = await strapi.query('plugin::strapi-reservations.schedule').findMany()
+    const schedules = await strapi.documents('plugin::strapi-reservations.schedule').findMany()
 
     const date = dayjs(ctx.params.date, "MM-DD-YYYY")
     // get schedule for a given date
@@ -33,7 +33,7 @@ module.exports = ({ strapi }) => ({
   create: async (ctx) => {
     try {
       const { body } = ctx.request      
-      ctx.body = await strapi.entityService.create('plugin::strapi-reservations.schedule', {
+      ctx.body = await strapi.documents('plugin::strapi-reservations.schedule').create({
         data: body,
       });   
     } catch (err) {
@@ -47,7 +47,8 @@ module.exports = ({ strapi }) => ({
   update: async (ctx) => {
     try {
       const { body } = ctx.request
-      ctx.body = await strapi.entityService.update('plugin::strapi-reservations.schedule', body.id, {
+      ctx.body = await strapi.documents('plugin::strapi-reservations.schedule').update({
+        documentId: body.id,
         data: body,
       });
     } catch (err) {
@@ -61,7 +62,9 @@ module.exports = ({ strapi }) => ({
    delete: async (ctx) => {
     try {
       const id = ctx.params.id
-      ctx.body = await strapi.entityService.delete('plugin::strapi-reservations.schedule', id);
+      ctx.body = await strapi.documents('plugin::strapi-reservations.schedule').delete({
+        documentId: id
+      });
     } catch (err) {
       // console.error(err)
       ctx.body = {
@@ -74,7 +77,7 @@ module.exports = ({ strapi }) => ({
     try {
    
      // Get all available schedules
-     ctx.body = await strapi.query('plugin::strapi-reservations.schedule').findMany()
+     ctx.body = await strapi.documents('plugin::strapi-reservations.schedule').findMany()
    
     } catch (err) {
       // console.error(err)
@@ -89,12 +92,10 @@ module.exports = ({ strapi }) => ({
       const { body } = ctx.request
 
       const promises = body.map(
-        schedule => strapi.entityService.update(
-          'plugin::strapi-reservations.schedule', 
-          schedule.id, {
-            data: schedule,
-          }
-        )
+        schedule => strapi.documents('plugin::strapi-reservations.schedule').update({
+          documentId: schedule.id,
+          data: schedule,
+        })
       )
       ctx.body = await Promise.all(promises)
     } catch (err) {

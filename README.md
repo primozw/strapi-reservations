@@ -7,6 +7,9 @@
 The Strapi Reservation Plugin is a custom plugin designed to enable reservation
 functionality with predefined time slots.
 
+> **✨ Version 2.0+ is compatible with Strapi v5**  
+> For Strapi v4, use version 1.x
+
   <img style="width: 100%; max-width: 1280px; height: auto;" src="public/screenshot.png" alt="Screenshot of Strapi Reservation Plugin" />
 </div>
 
@@ -270,7 +273,7 @@ plugin:
 ```js
 // ./src/extensions/strapi-reservations/strapi-server.js
 
-module.exports = plugin => {
+module.exports = (plugin) => {
   plugin.services.hooks = () => ({
     async onConfirm(ctx) {
       const { body: data } = ctx.request;
