@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import { auth, useNotification } from '@strapi/helper-plugin';
+import { auth, useNotification } from '@strapi/strapi/admin';
 import styled from '@emotion/styled';
 
 import { 

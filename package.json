@@ -1,7 +1,7 @@
 {
   "name": "@weingerl/strapi-reservations",
-  "version": "1.0.4",
-  "description": "Strapi plugin designed to enable reservation functionality with predefined time slots.",
+  "version": "2.0.0",
+  "description": "Strapi plugin designed to enable reservation functionality with predefined time slots. Compatible with Strapi v5.",
   "strapi": {
     "name": "strapi-reservations",
     "description": "Strapi plugin designed to enable reservation functionality with predefined time slots.",
@@ -25,9 +25,9 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@mui/x-date-pickers": "^6.9.0",
-    "@strapi/design-system": "^1.7.10",
-    "@strapi/helper-plugin": "^4.10.7",
-    "@strapi/icons": "^1.7.10",
+    "@strapi/design-system": "^2.0.0-rc.14",
+    "@strapi/icons": "^2.0.0-rc.14",
+    "axios": "^1.6.0",
     "date-holidays": "^3.16.17",
     "dayjs": "^1.11.7",
     "lodash": "^4.17.21",
@@ -45,7 +45,7 @@
     "@formatjs/cli": "^6.1.1"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^4.0.0"
+    "@strapi/strapi": "^5.0.0"
   },
   "author": {
     "name": "Primož Weingerl",
@@ -60,8 +60,8 @@
     }
   ],
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=8.0.0"
   },
   "license": "MIT"
 }

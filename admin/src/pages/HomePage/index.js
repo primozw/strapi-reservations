@@ -14,8 +14,7 @@ import {
   useTheme,
 } from "@strapi/design-system";
 
-import { Illo } from "@strapi/design-system/EmptyStateLayout/story-assets/Illo.js"
-import {BaseHeaderLayout, ContentLayout} from "@strapi/design-system/Layout"
+import { Layouts } from "@strapi/design-system";
 import {Select, Option} from "@strapi/design-system/Select"
 import {Cog, Plus, ChevronLeft, ChevronRight} from "@strapi/icons"
 
@@ -158,12 +157,12 @@ function HomePage() {
 
   return (
     <Container>
-      <BaseHeaderLayout 
+      <Layouts.Header 
         title={formatMessage({ id: 'strapi-reservations.calendar.title', defaultMessage: 'Reservations Calendar' })} 
         as="h2" 
         primaryAction={primaryAction}
       />
-      <ContentLayout>
+      <Layouts.Content>
         <Box id="calendar" background="neutral0" shadow="filterShadow" padding={[5, 8]} hasRadius>
           <Flex justifyContent="space-between" style={{marginBottom: 10}}>
             <Flex>
@@ -221,7 +220,7 @@ function HomePage() {
             />
           </Scheduler>
         </Box>
-      </ContentLayout>
+      </Layouts.Content>
     </Container>
   );
 }

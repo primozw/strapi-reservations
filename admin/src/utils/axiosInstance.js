@@ -3,7 +3,7 @@
  */
 
 import axios from 'axios';
-import { auth, wrapAxiosInstance } from '@strapi/helper-plugin';
+import { auth } from '@strapi/strapi/admin';
 
 const instance = axios.create({
   baseURL: process.env.STRAPI_ADMIN_BACKEND_URL,
@@ -37,6 +37,4 @@ instance.interceptors.response.use(
   }
 );
 
-const axiosInstance = wrapAxiosInstance(instance);
-
-export default axiosInstance;
+export default instance;

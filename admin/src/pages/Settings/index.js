@@ -1,14 +1,15 @@
 // admin/src/pages/Settings/index.js
 import React, { useEffect, useState } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
-import { LoadingIndicatorPage, useNotification, difference } from '@strapi/helper-plugin';
+import { Page, useNotification } from '@strapi/strapi/admin';
+import { difference } from 'lodash';
 import { 
   Box,
   Button,
-  Typography
+  Typography,
+  Loader
 } from '@strapi/design-system';
-import { HeaderLayout } from '@strapi/design-system/Layout';
-import { ContentLayout } from '@strapi/design-system/Layout';
+import { Layouts } from '@strapi/design-system';
 import Check from '@strapi/icons/Check';
 
 import api from '../../api';
@@ -83,7 +84,7 @@ const Settings = () => {
 
   return (
     <>
-      <HeaderLayout
+      <Layouts.Header
         id="title"
         title={formatMessage({
           id: 'strapi-reservations.settings.title',
@@ -104,11 +105,11 @@ const Settings = () => {
             Save
           </Button> 
         }
-      ></HeaderLayout>
+      />
       {( settings === null ) ? (
-        <LoadingIndicatorPage />
+        <Page.Loading />
       ) : (
-        <ContentLayout>
+        <Layouts.Content>
           <Box
             background="neutral0"
             hasRadius
@@ -135,7 +136,7 @@ const Settings = () => {
               {/* <Colors settings={settings} handleSettings={handleSettings} /> */}
             </Box>
           </Box>
-        </ContentLayout>
+        </Layouts.Content>
       )}
     </>
   );

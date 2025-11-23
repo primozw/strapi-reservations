@@ -21,7 +21,7 @@ module.exports = () => ({
       ],
     };
 
-    const data = await strapi.entityService.findMany('plugin::strapi-reservations.reservation', {
+    const data = await strapi.documents('plugin::strapi-reservations.reservation').findMany({
       filters
     });
 
@@ -48,8 +48,8 @@ module.exports = () => ({
   },
 
   async setReservationStatus(id, status){
-    return await strapi.db.query('plugin::strapi-reservations.reservation').update({
-      where: { id },
+    return await strapi.documents('plugin::strapi-reservations.reservation').update({
+      documentId: id,
       data: {
         status,
       },

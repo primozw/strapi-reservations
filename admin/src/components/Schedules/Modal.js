@@ -15,7 +15,7 @@ import {
   Button,
   ToggleInput
 } from '@strapi/design-system';
-import { useNotification } from '@strapi/helper-plugin';
+import { useNotification } from '@strapi/strapi/admin';
 
 import { set } from 'lodash';
 

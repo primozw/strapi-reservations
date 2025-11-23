@@ -16,7 +16,7 @@ import api from '../../api'
 import CalendarDay from './CalendarDay';
 import TimeSlots from './TimeSlots';
 
-import { useCMEditViewDataManager } from '@strapi/helper-plugin';
+import { unstable_useDocument } from '@strapi/content-manager/strapi-admin';
 
 import { 
   Flex,
@@ -69,9 +69,10 @@ export default function ReservationsCalendar(props) {
   const [month, setMonth] = React.useState(initialValue.startOf('month'))
 
   const { formatMessage, locale } = useIntl()
-  const { slug } = useCMEditViewDataManager()
+  const document = unstable_useDocument()
 
-  if (slug !== 'plugin::strapi-reservations.reservation') return null
+  // Check if we're in the reservation content type
+  if (document?.collectionType !== 'plugin::strapi-reservations.reservation') return null
 
   const fetchData = (date) => {
     const controller = new AbortController();

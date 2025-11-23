@@ -43,7 +43,7 @@ module.exports = ({ strapi }) => ({
         end = end.endOf('week')
       }
 
-      const reservations = await strapi.entityService.findMany('plugin::strapi-reservations.reservation', {
+      const reservations = await strapi.documents('plugin::strapi-reservations.reservation').findMany({
         filters: {
           $and: [
             {
@@ -59,7 +59,7 @@ module.exports = ({ strapi }) => ({
       // console.log(reservations)
 
       // Get all available schedules
-      const schedules = await strapi.entityService.findMany('plugin::strapi-reservations.schedule', {
+      const schedules = await strapi.documents('plugin::strapi-reservations.schedule').findMany({
         sort: { order: 'ASC' }
       })
 
