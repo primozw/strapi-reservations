@@ -196,7 +196,7 @@ function HomePage() {
           <Scheduler
             data={data} 
             locale={ locale } 
-            firstDayOfWeek={new Intl.Locale(locale).weekInfo?.firstDay || 1}
+            firstDayOfWeek={new Intl.Locale(locale).getWeekInfo()?.firstDay || 1}
             onCellClick={cellClickHandler}
           >
             <ViewState onCurrentDateChange={load} currentDate={dayjs(state.date, "ll").format()} currentViewName={state.view}/>
